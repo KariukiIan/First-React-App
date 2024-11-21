@@ -10,12 +10,12 @@ function App() {
 		JSON.parse(localStorage.getItem("shoppinglist")) || [
 			{
 				id: 1,
-				item: "Beans",
+				product: "Beans",
 				checked: true,
 			},
 			{
 				id: 2,
-				item: "Chips",
+				product: "Chips",
 				checked: true,
 			},
 		]
