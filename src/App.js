@@ -1,4 +1,5 @@
 import Header from "./Header";
+import SearchProduct from "./SearchProduct";
 import AddProduct from "./AddProduct";
 import Footer from "./Footer";
 import Content from "./Content";
@@ -10,6 +11,7 @@ function App() {
 	);
 
 	const [newProduct, setNewProduct] = useState("");
+	const [search, setSearch] = useState("");
 
 	// Add products to localStorage and update state.
 	const setAndSaveItems = (newProducts) => {
@@ -60,8 +62,11 @@ function App() {
 				setNewProduct={setNewProduct}
 				handleSubmit={handleSubmit}
 			/>
+			<SearchProduct search={search} setSearch={setSearch} />
 			<Content
-				products={products}
+				products={products.filter((product) =>
+					product.product.toLowerCase().includes(search.toLowerCase())
+				)} // search functionality.
 				handleCheck={handleCheck}
 				handleDelete={handleDelete}
 			/>

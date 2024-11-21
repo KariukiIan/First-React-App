@@ -1,6 +1,8 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa";
 
+
+
 const AddProduct = ({ newProduct, setNewProduct, handleSubmit }) => {
 	return (
 		<form className="addForm" onSubmit={handleSubmit}>
