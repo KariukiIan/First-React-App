@@ -7,7 +7,18 @@ import { useState } from "react";
 
 function App() {
 	const [products, setProducts] = useState(
-		JSON.parse(localStorage.getItem("shoppinglist"))
+		JSON.parse(localStorage.getItem("shoppinglist")) || [
+			{
+				id: 1,
+				item: "Beans",
+				checked: true,
+			},
+			{
+				id: 2,
+				item: "Chips",
+				checked: true,
+			},
+		]
 	);
 
 	const [newProduct, setNewProduct] = useState("");
