@@ -1,13 +1,155 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+	font-size: 22px;
+}
+
+body {
+	min-height: 100vh;
+	font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100%;
+	margin: auto;
+}
+
+header {
+	width: 100%;
+	padding: 0 0.25em;
+	background-color: rgb(223, 223, 246);
+	color: rgb(13, 17, 21);
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	margin-left: 50px;
+}
+
+footer {
+	width: 100%;
+	padding: 0.25em;
+	background-color: rgb(111, 111, 172);
+	color: aliceblue;
+	display: grid;
+	place-content: center;
+}
+
+ul {
+	width: 100%;
+	list-style: none;
+	padding: 0 0.25rem 0.25rem;
+}
+
+/* ul li::before {
+	content: "\200B";
+} */
+
+.product {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.5rem 0 0.5rem 0.5rem;
+	margin: 0.25rem 0;
+	background-color: #eee;
+}
+
+.product:first-child {
+	margin: 0;
+}
+
+.product input[type="checkbox"] {
+	text-align: center;
+	width: 2.5rem;
+	width: 48px;
+	min-width: 48px;
+	height: 2.5rem;
+	height: 48px;
+	min-height: 48px;
+	cursor: pointer;
+	margin-right: 0.5rem;
+}
+
+.product input[type="checkbox"]:focus + label {
+	text-decoration: underline;
+}
+
+.product > label {
+	font-size: 0.75rem;
+	flex-grow: 1;
+}
+
+.product svg {
+	width: 48px;
+	min-width: 48px;
+	height: 36px;
+	font-size: 1rem;
+	color: rgb(70, 180, 127);
+	cursor: pointer;
+}
+
+.product svg:focus,
+.product svg:hover {
+	color: red;
+	outline: none;
+}
+
+.addForm {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	margin: 2rem 0rem 1rem;
+	padding: 0 0.5rem 0.25rem;
+}
+
+.addForm label {
+	position: relative;
+	margin-right: 1rem;
+	margin-left: 2rem;
+	margin-top: 0.4rem;
+}
+
+.addForm input[type="text"] {
+	flex-grow: 1;
+	max-width: calc(100% - 50px);
+	min-height: 50px;
+	font-size: 1rem;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	margin-right: 2rem;
+	outline: none;
+}
+
+button {
+	height: 50px;
+	min-width: 50px;
+	border-radius: 0.25rem;
+	padding: 0.5rem;
+	font-size: 1rem;
+	background-color: #eee;
+	color: mediumblue;
+	cursor: pointer;
+	margin-right: 1rem;
+}
+
+button:focus,
+button:hover {
+	color: #eee;
+	background-color: limegreen;
+	outline: none;
 }
