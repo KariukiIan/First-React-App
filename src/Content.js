@@ -3,7 +3,7 @@ import ProductsList from "./productsList";
 
 const Content = ({ products, handleCheck, handleDelete }) => {
 	return (
-		<main>
+		<>
 			{products.length ? (
 				<ProductsList
 					products={products}
@@ -13,7 +13,7 @@ const Content = ({ products, handleCheck, handleDelete }) => {
 			) : (
 				<p style={{ marginTop: "2rem" }}>Your list is empty.</p>
 			)}
-		</main>
+		</>
 	);
 };
 
